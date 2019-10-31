@@ -26,17 +26,26 @@ public class _00_ArrayCheatSheet {
 		//8. use a for loop to make every value of the integer array a random number
 		Random gen = new Random();
 		int g;
+		int low = 50;
+		int high = 1;
 		for(int i = 0;i<tegs.length;i++) {
 			g = gen.nextInt(50)+1;
 			tegs[i] = g;
-		}
+			System.out.println(tegs[i]);
 		//9. without printing the entire array, print only the smallest number on the array
-		int low = 50;
+			if (tegs[i]<low) {
+				low = tegs[i];
+			}
+			if (tegs[i]>high) {
+				high = tegs[i];
+			}
+		}
 		//10 print the entire array to see if step 8 was correct
 
 		//11. print the largest number in the array.
-		
+		System.out.println("this is lowest: " + low);
+		System.out.println("this is highest: " + high);
 		//12. print only the last element in the array
-		
+		System.out.println(tegs[49]);
 	}
 }
