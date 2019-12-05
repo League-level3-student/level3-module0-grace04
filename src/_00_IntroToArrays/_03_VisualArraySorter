@@ -12,9 +12,9 @@ void setup() {
   
   //4. initialize the ints in the array with random numbers
   //   from 0 to the built in height variable
-  for(int i=0; i<width; i++){
+  /*for(int i=0; i<width; i++){
     arr[i] = (int) random(height);
-  }
+  }*/
   //5. call the noStroke() method
   noStroke();
 }
@@ -32,16 +32,24 @@ void draw() {
   //   the y value will the height variable
   //   the width is 1
   //   the height is negative the value of the int at that element in the array
-
+    rect(i, height, 1, -arr[i]);
   }
   //9. call the stepSort method
-  
+  stepSort(arr);
 
   //10. extract the code that randomizes the array into a method.
   
 
   //11. call the method you made in step 10 when the mouse is pressed
-  
+  if (mousePressed==true){
+    random();
+  }
+}
+
+void random(){
+    for(int i=0; i<width; i++){
+    arr[i] = (int) random(height);
+  }
 }
 
 void stepSort(int[] arr) {
